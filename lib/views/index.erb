@@ -1,0 +1,10 @@
+<% unless current_user %>
+  <a href="/auth/login">Log In</a>
+<% else %>
+  <%= "Logged in as #{current_user.username}" %>
+<% end %>
+<h1>Our Menu</h1>
+<% @dishes.each do |dish| %>
+  <p><%= dish.name %> </p>
+
+<% end %>
